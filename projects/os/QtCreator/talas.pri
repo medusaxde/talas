@@ -16,9 +16,9 @@
 #   File: talas.pri
 #
 # Author: $author$
-#   Date: 3/5/2023
+#   Date: 3/5/2023, 6/17/2023
 #
-# os specific QtCreator project file for texta framework talas
+# os specific QtCreator project file for framework talas
 ########################################################################
 # Depends: openssl;libressl;bn;mp;nadir;rostra
 
@@ -38,6 +38,10 @@ WINDOWS_VERSION = $$system(ver)
 } # contains(UNAME,Darwin)
 
 contains(UNAME,Darwin) {
+contains(DARWIN_VERSION,12.5.1) {
+DARWIN_VERSION_NAME = Monterey
+DARWIN_VERSION_NUMBER = 12+
+} else {
 contains(DARWIN_VERSION,11.5.1) {
 DARWIN_VERSION_NAME = Bigsur
 DARWIN_VERSION_NUMBER = 11+
@@ -50,6 +54,7 @@ DARWIN_VERSION_NAME = Mavricks
 DARWIN_VERSION_NUMBER = 9+
 } # contains(DARWIN_VERSION,10.12.6)
 } # contains(DARWIN_VERSION,11.5.1)
+} # contains(DARWIN_VERSION,12.5.1)
 } # contains(UNAME,Darwin)
 
 contains(UNAME,Darwin) {
@@ -78,9 +83,14 @@ CONFIG += c++$${BUILD_CPP_VERSION}
 } # contains(BUILD_CPP_VERSION,10)
 
 contains(TALAS_OS,macosx) {
+contains(DARWIN_VERSION_NUMBER,12+) {
+QMAKE_CFLAGS += -Wno-implicit-function-declaration
+} else {
 contains(DARWIN_VERSION_NUMBER,11+) {
 QMAKE_CFLAGS += -Wno-implicit-function-declaration
+} else {
 } # contains(DARWIN_VERSION_NUMBER,11+)
+} # contains(DARWIN_VERSION_NUMBER,12+)
 } else {
 contains(TALAS_OS,linux) {
 QMAKE_CXXFLAGS += -fpermissive

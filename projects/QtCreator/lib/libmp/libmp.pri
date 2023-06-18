@@ -18,7 +18,7 @@
 # Author: $author$
 #   Date: 3/5/2023
 #
-# generic QtCreator project file for texta framework talas static library libmp
+# generic QtCreator project file for framework talas static library libmp
 ########################################################################
 
 ########################################################################

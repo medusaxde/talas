@@ -18,7 +18,7 @@
 # Author: $author$
 #   Date: 3/5/2023
 #
-# build specific QtCreator project file for texta framework talas
+# build specific QtCreator project file for framework talas
 ########################################################################
 # Depends: openssl;libressl;bn;mp;nadir;rostra
 

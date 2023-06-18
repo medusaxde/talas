@@ -18,7 +18,7 @@
 # Author: $author$
 #   Date: 3/5/2023
 #
-# generic QtCreator project .pri file for texta framework talas
+# generic QtCreator project .pri file for framework talas
 ########################################################################
 # Depends: openssl;libressl;bn;mp;nadir;rostra
 

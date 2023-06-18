@@ -18,7 +18,7 @@
 # Author: $author$
 #   Date: 3/5/2023
 #
-# os specific QtCreator project .pro file for texta framework talas static library libmpz
+# os specific QtCreator project .pro file for framework talas static library libmpz
 ########################################################################
 # Depends: openssl;libressl;bn;mp;nadir;rostra
 #

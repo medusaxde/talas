@@ -16,9 +16,9 @@
 #   File: libtalas.pri
 #
 # Author: $author$
-#   Date: 3/5/2023
+#   Date: 3/5/2023, 6/17/2023
 #
-# generic QtCreator project file for texta framework talas static library libtalas
+# generic QtCreator project file for framework talas static library libtalas
 ########################################################################
 
 ########################################################################
@@ -162,6 +162,14 @@ $${TALAS_SRC}/talas/crypto/ecc/curve25519/base_point.cpp \
 $${TALAS_SRC}/talas/crypto/ecc/curve25519/array.cpp \
 
 ########################################################################
+# version
+libtalas_version_HEADERS += \
+$${TALAS_SRC}/xos/lib/talas/version.hpp \
+
+libtalas_version_SOURCES += \
+$${TALAS_SRC}/xos/lib/talas/version.cpp \
+
+########################################################################
 # libtalas HEADERS
 #
 libtalas_HEADERS += \
@@ -170,6 +178,7 @@ $${libtalas_hash_HEADERS} \
 $${libtalas_cipher_HEADERS} \
 $${libtalas_rsa_HEADERS} \
 $${libtalas_ecc_HEADERS} \
+$${libtalas_version_HEADERS} \
 
 # libtalas SOURCES
 #
@@ -180,5 +189,6 @@ $${libtalas_cipher_SOURCES} \
 $${libtalas_prime_SOURCES} \
 $${libtalas_rsa_SOURCES} \
 $${libtalas_ecc_SOURCES} \
+$${libtalas_version_SOURCES} \
 
 ########################################################################
